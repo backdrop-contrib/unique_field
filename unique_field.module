@@ -178,7 +178,7 @@ function unique_field_node_validate($node, $form) {
             }
           }
           $field_info = field_info_field($field);
-          $values = _field_filter_items($field_info, $fvalues);
+          $values = _field_filter_items($field_info, $fvalues, field_info_instance('node', $field, $node->type));
         }
         if (empty($values)) {
           continue;
